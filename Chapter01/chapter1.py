@@ -247,7 +247,7 @@ else:
   print("Both Firstlist and Secondlist variables are not the same object") 
 
 #Output:
-# Both are pointing to the different object
+# Both Firstlist and Secondlist variables are the same object
 
 
 
@@ -480,6 +480,7 @@ print('Using key ISBN:' + Book1.ISBN)
 
 from collections import deque
 s = deque()        # Creates an empty deque
+print(s)
 my_queue = deque([1, 2, 'Name'])
 print(my_queue)
 #deque([1, 2, 'Name'])
@@ -525,9 +526,9 @@ chain = ChainMap(dict1, dict2)
 
 print(chain)
 #ChainMap({'data': 1, 'structure': 2}, {'python': 3, 'language': 4})
-print (list(chain.keys()))
+print(list(chain.keys()))
 #['python', 'language', 'data', 'structure']
-print (list(chain.values()))
+print(list(chain.values()))
 #[3, 4, 1, 2]
 print(chain["data"])
 #1
