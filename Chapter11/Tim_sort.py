@@ -29,9 +29,9 @@ def Merge(first_sublist, second_sublist):
     return merged_list
 
 
-def Tim_Sort(arr,run):
+def Tim_Sort(arr, run):
     for x in range(0, len(arr), run):
-        arr[x : x + run] = InsertionSort(arr[x : x + run]) 
+        arr[x : x + run] = Insertion_Sort(arr[x : x + run]) 
     runSize = run
     
     while runSize < len(arr):
@@ -44,12 +44,5 @@ arr = [4, 6, 3, 9, 2, 8, 7, 5]
 run = 2
 
 
-Tim_Sort(arr,run) 
+Tim_Sort(arr, run) 
 print(arr)
-
-
-import random
-array = [random.randint(0, 1000) for i in range(1000)]
-
-Tim_Sort(array,run) 
-print(array)
