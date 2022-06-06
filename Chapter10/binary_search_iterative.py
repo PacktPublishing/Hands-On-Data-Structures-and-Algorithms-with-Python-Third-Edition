@@ -27,7 +27,7 @@ print(binary_search_iterative(store, 60))
 list1 = [10, 30, 100, 120, 500]
 
 search_term = 10
-index_position1 = binary_search(list1, search_term)
+index_position1 = binary_search_iterative(list1, search_term)
 if index_position1 is None:
     print("The data item {} is not found".format(search_term))
 else:
@@ -37,7 +37,7 @@ else:
 list2 = ['book','data','packt', 'structure']
 
 search_term2 = 'structure'
-index_position2 = search_ordered(list2, search_term2)
+index_position2 = binary_search_iterative(list2, search_term2)
 if index_position2 is None:
     print("The data item {} is not found".format(search_term2))
 else:
