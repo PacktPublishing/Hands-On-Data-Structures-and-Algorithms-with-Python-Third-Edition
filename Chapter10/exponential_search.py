@@ -25,4 +25,4 @@ def exponential_search(A, search_value):
 
 
 
-print(exponential_search([1,2,3,4,5,6,7,8,9, 10, 11, 12, 34, 40], 34)) 
+print(exponential_search([1,2,3,4,5,6,7,8,9,10,11,12,34,40],34)) 
