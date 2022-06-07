@@ -1,4 +1,4 @@
-class minHeap:
+class MinHeap:
     def __init__(self):
         self.heap = [0]
         self.size = 0
@@ -55,35 +55,27 @@ class minHeap:
       
       
       
-h = minHeap()
+h = MinHeap()
 for i in ( 4, 8, 7, 2, 9, 10, 5, 1, 3, 6):
     h.insert(i)
-
 print(h.heap)
 
 
-h = minHeap()  
+h = MinHeap()  
 unsorted_list = [4, 8, 7, 2, 9, 10, 5, 1, 3, 6]  
-
-
 for i in unsorted_list:  
     h.insert(i)  
-
 print("Unsorted list: {}".format(unsorted_list))  
 
 
 
 
 
-h = minHeap()  
+h = MinHeap()  
 unsorted_list = [4, 8, 7, 2, 9, 10, 5, 1, 3, 6]  
-
-
 for i in unsorted_list:  
     h.insert(i)  
-
 print("Unsorted list: {}".format(unsorted_list))  
-
 
 print("Sorted list: {}".format(h.heap_sort()))  
 
