@@ -10,7 +10,7 @@ class HashTable:
         self.slots = [None for i in range(self.size)]
         self.count = 0
         self.MAXLOADFACTOR = 0.65
-        
+        self.prime_num = 5
 
     def check_growth(self):
         loadfactor = self.count / self.size 
@@ -97,7 +97,7 @@ class HashTable:
         return hv
   
     
-    def put_doubleHashing(self, key, value):
+    def put_double_hashing(self, key, value):
         item = HashItem(key, value)
         h = self._hash(key)
         j = 1    
@@ -111,7 +111,7 @@ class HashTable:
         self.slots[h] = item
         self.check_growth()
     
-    def get_doubleHashing(self, key):
+    def get_double_hashing(self, key):
         h = self._hash(key)
         j = 1
         while self.slots[h] != None:
@@ -129,6 +129,15 @@ class HashTable:
 
     def __getitem__(self, key):
         return self.get(key)
+    
+    
+    
+ht = HashTable()
+ht.put_quadratic(“good”, “eggs”)
+ht.put_quadratic(“ad”, “packt”)
+ht.put_quadratic(“ga”, “books”)
+v = ht.get_quadratic(“ga”)
+print(v)
       
       
 ht = HashTable() 
@@ -136,13 +145,28 @@ ht.put("good", "eggs")
 ht.put("better", "ham") 
 ht.put("best", "spam") 
 ht.put("ad", "do not") 
-ht.put("ga", "collide") 
+ht.put("ga", "collide")
+ht.put(“awd”, “do not”)
+ht.put(“add”, “do not”)
+ht.checkGrow()
 
 for key in ("good", "better", "best", "worst", "ad", "ga"): 
         v = ht.get(key) 
         print(v) 
 
-        
+
+ht = HashTable()
+ht.put_double_hashing(“good”, “eggs”)
+ht.put_double_hashing(“better”, “spam”)
+ht.put_double_hashing(“best”, “cool”)
+ht.put_double_hashing(“ad”, “donot”)
+ht.put_double_hashing(“ga”, “collide”)
+ht.put_double_hashing(“awd”, “hello”)
+ht.put_double_hashing(“addition”, “ok”)
+for key in (“good”, “better”, “best”, “worst”, “ad”, “ga”):
+v = ht.get_double_hashing(key)
+print(v)
+print(“The number of elements is: {}”.format(ht.count))        
         
     
 ht = HashTable()
