@@ -7,6 +7,7 @@ class Node:
         
 class SinglyLinkedList:
     def __init__ (self):
+        self.tail = None
         self.head = None
         self.size = 0
         
