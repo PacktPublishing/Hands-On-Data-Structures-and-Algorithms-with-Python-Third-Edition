@@ -61,7 +61,6 @@ words.append('spam')
 
 
 words.delete_last_node()
-
 current = words.tail
 while current:
     print(current.data)
@@ -70,7 +69,7 @@ while current:
     
     
 words.delete('ham')
-current = words.tail
+current = words.head
 while current:
     print(current.data)
     current = current.next
