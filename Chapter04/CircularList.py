@@ -28,17 +28,26 @@ class CircularList:
     def delete(self, data):
         current = self.head
         prev = self.head
+        flag = False
         while prev == current or prev != self.tail:
             if current.data == data:
                 if current == self.head:
+                    #item to be deleted is head node 
                     self.head = current.next
                     self.tail.next = self.head
+                elif current == self.tail:   
+                    #item to be deleted is tail node 
+                    self.tail = prev 
+                    prev.next = self.head 
                 else:
+                    #item to be deleted is an intermediate node 
                     prev.next = current.next
                 self.size -= 1
                 return
             prev = current
             current = current.next
+        if flag is False:
+            print("Item not present in the list")
     
 
     def iter(self):
@@ -93,11 +102,3 @@ for item in words.iter():
     counter += 1
     if counter > 2:
         break
-        
-        
-        
-        
-        
-        
-        
-
