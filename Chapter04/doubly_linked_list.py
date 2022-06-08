@@ -11,7 +11,7 @@ class DoublyLinkedList(object):
         self.count = 0
     
     def append(self, data):
-        #Append an item to the list.   
+        #Append an item at the end of the list.   
         new_node = Node(data, None, None)
         if self.head is None:
             self.head = new_node
