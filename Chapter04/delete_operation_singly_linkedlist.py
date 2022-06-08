@@ -6,16 +6,16 @@ class Node:
 
 class SinglyLinkedList:
     def __init__ (self):
-        self.tail = None
+        self.head = None
         self.size = 0
         
     def append(self, data):
         # Encapsulate the data in a Node 
         node = Node(data)
-        if self.tail is None:
-            self.tail = node    
+        if self.head is None:
+            self.head = node    
         else: 
-            current = self.tail 
+            current = self.head 
             while current.next:
                 current = current.next 
             current.next = node
@@ -29,8 +29,8 @@ class SinglyLinkedList:
             
           
     def delete_last_node (self): 
-        current = self.tail 
-        prev = self.tail 
+        current = self.head 
+        prev = self.head
         while current:
             if current.next is None:
                 prev.next = current.next 
@@ -40,12 +40,12 @@ class SinglyLinkedList:
             
 
     def delete(self, data): 
-        current = self.tail 
-        prev = self.tail 
+        current = self.head 
+        prev = self.head 
         while current:
             if current.data == data:
-                if current == self.tail:
-                    self.tail = current.next 
+                if current == self.head:
+                    self.head = current.next 
                 else:
                     prev.next = current.next 
                 self.size -= 1
@@ -59,9 +59,18 @@ words.append('egg')
 words.append('ham')
 words.append('spam')
 
+words.delete_first_node()
 
+current = words.head
+while current:
+    print(current.data)
+    current = current.next
+
+
+    
 words.delete_last_node()
-current = words.tail
+
+current = words.head
 while current:
     print(current.data)
     current = current.next
