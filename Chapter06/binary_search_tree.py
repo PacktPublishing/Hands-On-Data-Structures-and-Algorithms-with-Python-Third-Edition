@@ -112,8 +112,10 @@ class Tree:
         current = self.root_node
         while True:
             if current is None:
+                print("Item not found")
                 return None
             elif current.data is data:
+                print("Item found", data)
                 return data
             elif current.data > data:
                 current = current.left_child
