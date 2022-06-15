@@ -46,8 +46,8 @@ def postorder(root_node):
         print(current.data)
 
 
-inorder( n1)
+inorder(n1)
 print("\n" )
-preorder( n1)
+preorder(n1)
 print("\n" )
 postorder(n1)
