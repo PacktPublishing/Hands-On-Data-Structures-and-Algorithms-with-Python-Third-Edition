@@ -12,7 +12,7 @@ class Tree:
         node = Node(data)
         if self.root_node is None:
             self.root_node = node
-            return
+            return self.root_node
         else:
             current = self.root_node
             parent = None
@@ -22,20 +22,20 @@ class Tree:
                     current = current.left_child
                     if current is None:
                         parent.left_child = node
-                        return
+                        return self.root_node
                 else:
                     current = current.right_child
                     if current is None:
                         parent.right_child = node
-                        return
+                        return self.root_node
 
-    def inorder(self): 
-        current = self.root_node 
+    def inorder(self, root_node): 
+        current = root_node 
         if current is None: 
             return 
-        inorder(current.left_child) 
+        self.inorder(current.left_child) 
         print(current.data) 
-        inorder(current.right_child)
+        self.inorder(current.right_child)
         
                     
     def get_node_with_parent(self, data): 
@@ -112,8 +112,10 @@ class Tree:
         current = self.root_node
         while True:
             if current is None:
+                print("Item not found")
                 return None
             elif current.data is data:
+                print("Item found", data)
                 return data
             elif current.data > data:
                 current = current.left_child
@@ -137,20 +139,28 @@ class Tree:
       
       
 tree = Tree()
+r = tree.insert(5)
+r = tree.insert(2)
+r = tree.insert(7)
+r = tree.insert(9)
+r = tree.insert(1)
+
+tree.inorder(r)
+
+
+
+tree.search(9)      
+
+
+tree.remove(9)  
+tree.search(9)
+
+tree = Tree()
 tree.insert(5)
 tree.insert(2)
 tree.insert(7)
 tree.insert(9)
 tree.insert(1)
 
-tree.inorder()
-
-for i in range(1, 10):
-    found = tree.search(i)
-    print("{}: {}".format(i, found))
-    
-    
-print(tree.find_min())   
-
-print(tree.find_max())   
-      
+print(tree.find_min()) 
+print(tree.find_max()) 

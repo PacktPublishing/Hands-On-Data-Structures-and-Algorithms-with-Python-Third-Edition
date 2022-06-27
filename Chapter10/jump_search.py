@@ -10,33 +10,34 @@ def search_ordered(ordered_list, term):
 
 
 
-def jump_search(A, item): 
+def jump_search(ordered_list, item): 
+    import math
     print("Entering Jump Search") 
-    n = len(A)                           
-    m = int(math.sqrt(n))          
+    list_size = len(ordered_list)                           
+    block_size = int(math.sqrt(list_size))          
     i = 0                                
-    while i != len(A)-1 and A[i] <= item: 
-        print("Block under consideration - {}".format(A[i: i+m])) 
-        if i+m > len(A): 
-            m =  len(A) - i 
-            B = A[i: i+m] 
-            j = search_ordered(B, item) 
+    while i != len(ordered_list)-1 and ordered_list[i] <= item: 
+        print("Block under consideration - {}".format(ordered_list[i: i+block_size])) 
+        if i+ block_size > len(ordered_list): 
+            block_size =  len(ordered_list) - i 
+            block_list = ordered_list[i: i+block_size] 
+            j = search_ordered(block_list, item) 
             if j == -1: 
                 print("Element not found") 
                 return  
             return i + j 
-        if A[i+m-1] == item:            
-            return i+m-1 
-        elif A[i+m-1] > item:            
-            B = A[i: i+m-1] 
-            j = search_ordered(B, item) 
+        if ordered_list[i + block_size -1] == item:            
+            return i+block_size-1 
+        elif ordered_list[i + block_size - 1] > item:            
+            block_array = ordered_list[i: i + block_size - 1] 
+            j = search_ordered(block_array, item) 
             if j == -1: 
                 print("Element not found") 
-                return    
+                return   
             return i + j 
-        i += m
+        i += block_size
 
 
 
-print(jump_search([1,2,3,4,5,6,7,8,9, 10, 11], 10))
+print(jump_search([1,2,3,4,5,6,7,8,9, 10, 11], 8))
 

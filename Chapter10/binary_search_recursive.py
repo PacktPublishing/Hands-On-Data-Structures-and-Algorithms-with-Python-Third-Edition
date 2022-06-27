@@ -12,8 +12,7 @@ def binary_search_recursive(ordered_list, first_element_index, last_element_inde
             return mid_point  
             
             
-store = [2, 4, 5, 12, 43, 54, 60, 77] 
-print(binary_search_recursive(store, 0, 7, 12))
+ 
 
 
 
