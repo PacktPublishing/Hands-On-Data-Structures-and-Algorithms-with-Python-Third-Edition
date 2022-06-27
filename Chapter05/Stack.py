@@ -43,11 +43,10 @@ class Stack:
         
         
         
-words = stack()
-words.push('4')
-words.push('5')
-words.push('6')
-words.push('7')
+words = Stack()
+words.push('egg')
+words.push('ham')
+words.push('spam')
 
 #print the stack elements.
 current = words.top

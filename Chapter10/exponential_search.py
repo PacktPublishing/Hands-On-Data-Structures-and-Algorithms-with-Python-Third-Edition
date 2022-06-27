@@ -2,7 +2,7 @@ def binary_search_recursive(ordered_list, first_element_index, last_element_inde
     if (last_element_index < first_element_index):   
         return None   
     else:   
-        mid_point = first_element_index + ((last_element_index - first_element_index) // 2)   
+        mid_point = first_element_index + ((last_element_index - first_element_index) / 2)   
         if ordered_list[mid_point] > term:   
             return binary_search_recursive (ordered_list, first_element_index, mid_point-1, term)   
         elif ordered_list[mid_point] < term:   
@@ -14,7 +14,7 @@ def binary_search_recursive(ordered_list, first_element_index, last_element_inde
 
 
 
-def exponentialSearch(A, search_value): 
+def exponential_search(A, search_value): 
     if (A[0] == search_value): 
         return 0     
     index = 1 
@@ -25,4 +25,4 @@ def exponentialSearch(A, search_value):
 
 
 
-print(exponentialSearch([1,2,3,4,5,6,7,8,9, 10, 11, 12, 34, 40], 34)) 
+print(exponential_search([1,2,3,4,5,6,7,8,9,10,11,12,34,40],34)) 

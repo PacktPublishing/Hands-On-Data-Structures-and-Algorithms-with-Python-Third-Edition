@@ -23,12 +23,22 @@ class ListQueue:
         
 
 
-q= ListQueue()
-q.enqueue(4)
-q.enqueue('dog')
-q.enqueue('cat')
-q.enqueue('monday')
+q = ListQueue()
+q.enqueue(20)
+q.enqueue(30)
+q.enqueue(40)
+q.enqueue(50)
+print(q.items)
+#Queue is full
+#[20, 30, 40]
 
 
-a= q.size1()
+data = q.dequeue()
+print(data)
+print(q.items)
+#20
+#[30, 40]
+
+
+a = q.size1()
 print(a)

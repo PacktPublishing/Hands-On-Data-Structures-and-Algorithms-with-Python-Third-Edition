@@ -34,14 +34,14 @@ class SinglyLinkedList:
         current = self.head
         while current:
             if current.key == key: 
-                print("list ",current.key, current.value)
+                print("\"Record found:", current.key, "-", current.value, "\"")
                 return True
             current = current.next
         return False
     
 
     
-class HashTable:
+class HashTableChaining:
     def __init__(self):
         self.size = 6
         self.slots = [None for i in range(self.size)]
@@ -79,7 +79,7 @@ class HashTable:
 
 
 
-ht = HashTable() 
+ht = HashTableChaining() 
 ht.put("good", "eggs") 
 ht.put("better", "ham") 
 ht.put("best", "spam") 
@@ -99,4 +99,4 @@ for key in ("good", "better", "best", "worst", "ad", "ga"):
         print(v) 
         
         
-ht.printHashTable()         
+ht.printHashTable()  

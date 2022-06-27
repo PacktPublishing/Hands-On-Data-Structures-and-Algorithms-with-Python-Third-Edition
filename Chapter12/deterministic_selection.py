@@ -56,10 +56,10 @@ def get_index_of_nearest_median(array_list, first, second, median):
       
       
       
-def swap(array_list, first, second): 
+def swap(array_list, first, index_of_nearest_median): 
     temp = array_list[first] 
-    array_list[first] = array_list[second] 
-    array_list[second] = temp 
+    array_list[first] = array_list[index_of_nearest_median] 
+    array_list[index_of_nearest_median] = temp 
     
     
     

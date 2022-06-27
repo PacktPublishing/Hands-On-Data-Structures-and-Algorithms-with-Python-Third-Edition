@@ -9,14 +9,14 @@ print(type(12+31j))
 ###############
 
 var = 13.2
-print(var)
+print(type(var))
 #13.2
 
 type (var)
 #<class ‘float’>
 
 var = "Now the type is string"
-print(var)
+print(type(var))
 
 type(var)
 #<class ‘str’>
@@ -36,6 +36,7 @@ Output:
 '''
 
 bool(False)
+print(bool(False))
 #False
 va1 = 0
 print(bool(va1))
@@ -50,9 +51,11 @@ print(bool(va3))
 #True
 
 #### Strings
-Str1 = 'Hello how are you'
+str1 = 'Hello how are you'
 str2 = "Hello how are you"
 str3 = 'multiline'+'string';
+print(str1)
+print(str2)
 print(str3)
 
 f = 'data'
@@ -68,6 +71,22 @@ print(st * 3)
 #'data.data.data.'
 print(3 * st)
 #'data.data.data.'
+
+###### Range ######
+
+print(list(range(10)))
+print(range(10))
+print(list(range(10)))
+print(range(1,10,2))
+print(list(range(1,10,2)))
+print(list(range(20,10,-2)))
+
+#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#range(0, 10)
+#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#range(1, 10, 2)
+#[1, 3, 5, 7, 9]
+#[20, 18, 16, 14, 12]
 
 
 ###### Lists ######
@@ -209,7 +228,7 @@ thirdList = Firstlist
 if thirdList is Secondlist:
    print("Both are pointing to the same object")
 else:
-   print("Both are not pointing to the same object ") 
+   print("Both are not pointing to the same object") 
 '''
 Output:
 Both are equal	
@@ -223,12 +242,12 @@ Both are pointing to the same object
 Firstlist = []
 Secondlist = []
 if Firstlist is not Secondlist:
-  print("Both are pointing to the different object")
+  print("Both Firstlist and Secondlist variables are the same object")
 else:
-  print("Both are not pointing to the different object ") 
+  print("Both Firstlist and Secondlist variables are not the same object") 
 
 #Output:
-# Both are pointing to the different object
+# Both Firstlist and Secondlist variables are the same object
 
 
 
@@ -461,6 +480,7 @@ print('Using key ISBN:' + Book1.ISBN)
 
 from collections import deque
 s = deque()        # Creates an empty deque
+print(s)
 my_queue = deque([1, 2, 'Name'])
 print(my_queue)
 #deque([1, 2, 'Name'])
@@ -506,9 +526,9 @@ chain = ChainMap(dict1, dict2)
 
 print(chain)
 #ChainMap({'data': 1, 'structure': 2}, {'python': 3, 'language': 4})
-print (list(chain.keys()))
+print(list(chain.keys()))
 #['python', 'language', 'data', 'structure']
-print (list(chain.values()))
+print(list(chain.values()))
 #[3, 4, 1, 2]
 print(chain["data"])
 #1

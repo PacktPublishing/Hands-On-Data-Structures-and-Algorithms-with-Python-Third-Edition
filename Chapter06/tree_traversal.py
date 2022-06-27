@@ -1,8 +1,8 @@
 class Node: 
-        def __init__(self, data): 
-            self.data = data 
-            self.right_child = None 
-            self.left_child = None 
+    def __init__(self, data): 
+        self.data = data 
+        self.right_child = None 
+        self.left_child = None 
 
 
 n1 = Node("root node")  
@@ -46,8 +46,8 @@ def postorder(root_node):
         print(current.data)
 
 
-inorder( n1)
+inorder(n1)
 print("\n" )
-preorder( n1)
+preorder(n1)
 print("\n" )
 postorder(n1)

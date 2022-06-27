@@ -13,7 +13,7 @@ def insertion_sort(unsorted_list):
 
 
  
-my_list = [10, 11, 12, 1, 2, 3]
-print("List before sorting", my_list)
+my_list = [5, 1, 100, 2, 10]
+print("Original ist", my_list)
 insertion_sort(my_list)
-print("List before sorting", my_list)
+print("Sorted list", my_list)
