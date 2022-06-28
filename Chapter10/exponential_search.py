@@ -2,7 +2,7 @@ def binary_search_recursive(ordered_list, first_element_index, last_element_inde
     if (last_element_index < first_element_index):   
         return None   
     else:   
-        mid_point = first_element_index + ((last_element_index - first_element_index) / 2)   
+        mid_point = first_element_index + ((last_element_index - first_element_index) // 2)   
         if ordered_list[mid_point] > term:   
             return binary_search_recursive (ordered_list, first_element_index, mid_point-1, term)   
         elif ordered_list[mid_point] < term:   
