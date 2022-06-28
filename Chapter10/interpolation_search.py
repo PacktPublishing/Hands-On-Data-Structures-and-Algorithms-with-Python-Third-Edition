@@ -22,8 +22,8 @@ def interpolation_search(ordered_list, search_value):
             
             
             
-store = [44, 60, 75, 100, 120, 230, 250]
-a = interpolation_search(store, 120)
+list1 = [44, 60, 75, 100, 120, 230, 250]
+a = interpolation_search(list1, 120)
 print("Index position of value 2 is ", a)        
 
-print(nearest_mid(store, 0, 6, 120))
+print(nearest_mid(list1, 0, 6, 120))
