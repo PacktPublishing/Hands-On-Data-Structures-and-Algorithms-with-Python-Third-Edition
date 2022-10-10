@@ -27,19 +27,20 @@ class SinglyLinkedList:
         prev = self.head  
         node = Node(data) 
         count = 1 
-        while current: 
-            if index == 1:         
+        if index == 1:         
                 node.next = current 
                 self.head = node 
                 print(count) 
-                return 
-            elif count == index: 
-                node.next = current  
-                prev.next = node 
-                return 
-            count += 1 
-            prev = current 
-            current = current.next 
+                return
+        else:
+            while current:  
+                if count == index: 
+                    node.next = current  
+                    prev.next = node 
+                    return 
+                count += 1 
+                prev = current 
+                current = current.next 
         if count < index: 
             print("The list has less number of elements") 
 
