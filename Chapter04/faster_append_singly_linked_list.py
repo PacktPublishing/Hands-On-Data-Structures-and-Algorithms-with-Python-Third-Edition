@@ -19,6 +19,7 @@ class SinglyLinkedList:
         else:
             self.head = node 
             self.tail = node
+        self.size += 1
 
             
 words = SinglyLinkedList()

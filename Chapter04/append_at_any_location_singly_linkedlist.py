@@ -15,12 +15,13 @@ class SinglyLinkedList:
         # Encapsulate the data in a Node 
         node = Node(data)
         if self.head is None:
-            self.head = node    
+            self.head = node
         else: 
             current = self.head 
             while current.next:
                 current = current.next 
             current.next = node
+        self.size += 1
 
     def append_at_a_location(self, data, index):  
         current = self.head  
@@ -30,13 +31,15 @@ class SinglyLinkedList:
         if index == 1:         
                 node.next = current 
                 self.head = node 
+                self.size += 1
                 print(count) 
                 return
         else:
             while current:  
                 if count == index: 
                     node.next = current  
-                    prev.next = node 
+                    prev.next = node
+                    self.size += 1
                     return 
                 count += 1 
                 prev = current 

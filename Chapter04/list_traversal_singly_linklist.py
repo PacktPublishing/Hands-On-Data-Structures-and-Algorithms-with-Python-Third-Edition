@@ -14,13 +14,14 @@ class SinglyLinkedList:
         # Encapsulate the data in a Node 
         node = Node(data)
         if self.head is None:
-            self.head = node    
+            self.head = node
         else: 
             current = self.head 
             while current.next:
-                current = current.next 
+                current = current.next
             current.next = node
-    
+        self.size += 1   
+
     def iter(self):
         current = self.head 
         while current:

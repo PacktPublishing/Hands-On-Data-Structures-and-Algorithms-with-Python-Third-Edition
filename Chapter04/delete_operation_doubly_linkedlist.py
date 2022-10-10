@@ -8,7 +8,7 @@ class DoublyLinkedList:
     def __init__ (self):
         self.head = None
         self.tail = None
-        self.count = 0
+        self.size = 0
     
     def append(self, data):
         #Append an item to the list.   
@@ -20,7 +20,7 @@ class DoublyLinkedList:
             new_node.prev = self.tail 
             self.tail.next = new_node 
             self.tail = new_node
-            self.count += 1 
+        self.size += 1 
             
             
             
@@ -31,9 +31,9 @@ class DoublyLinkedList:
         if current is None:       #List is empty
             print("List is empty")
         elif current.data == data:   #Item to be deleted is found at starting of list
-            self.head.prev = None 
-            node_deleted = True 
             self.head = current.next
+            self.head.prev = None 
+            node_deleted = True
 
         elif self.tail.data == data:   #Item to be deleted is found at the end of list.
             self.tail = self.tail.prev  
@@ -50,7 +50,7 @@ class DoublyLinkedList:
             if node_deleted == False:   #Item to be deleted is not found in the list
                 print("Item not found")
         if node_deleted: 
-            self.count -= 1
+            self.size -= 1
 
             
             
