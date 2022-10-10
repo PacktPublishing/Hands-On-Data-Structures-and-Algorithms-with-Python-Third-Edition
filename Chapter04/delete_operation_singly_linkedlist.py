@@ -4,6 +4,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class SinglyLinkedList:
     def __init__ (self):
         self.head = None
@@ -28,8 +29,7 @@ class SinglyLinkedList:
         elif current == self.head:
             self.head = current.next
             self.size -= 1
-            
-          
+       
     def delete_last_node (self): 
         current = self.head 
         prev = self.head
@@ -39,8 +39,7 @@ class SinglyLinkedList:
                 self.size -= 1
             prev = current
             current = current.next
-            
-
+     
     def delete(self, data): 
         current = self.head 
         prev = self.head 

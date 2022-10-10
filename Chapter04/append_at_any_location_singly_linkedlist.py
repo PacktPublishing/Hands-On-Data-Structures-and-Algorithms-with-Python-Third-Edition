@@ -4,7 +4,7 @@ class Node:
         self.data = data
         self.next = None
 
-        
+
 class SinglyLinkedList:
     def __init__ (self):
         self.tail = None
@@ -47,10 +47,7 @@ class SinglyLinkedList:
         if count < index: 
             print("The list has less number of elements") 
 
-     
-            
-            
-            
+
 words = SinglyLinkedList()
 words.append('egg')
 words.append('ham')
@@ -60,9 +57,7 @@ current = words.head
 while current:
     print(current.data)
     current = current.next
-    
-    
-    
+
 words.append_at_a_location('new', 2)
 
 current = words.head

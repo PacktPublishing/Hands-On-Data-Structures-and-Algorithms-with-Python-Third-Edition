@@ -3,10 +3,8 @@ class Node:
     def __init__(self, data=None):
         self.data = data
         self.next = None
-        
-        
-    
-        
+
+
 class CircularList:
     def __init__ (self):
         self.tail = None
@@ -16,13 +14,13 @@ class CircularList:
     def append(self, data):  
         node = Node(data) 
         if self.tail: 
-            self.tail.next = node  
-            self.tail = node
+            self.tail.next = node
             node.next = self.head
+            self.tail = node
         else: 
             self.head = node 
             self.tail = node 
-            self.tail.next = self.tail
+            self.tail.next = self.head
         self.size += 1 
         
     def delete(self, data):

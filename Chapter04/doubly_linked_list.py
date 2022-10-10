@@ -3,7 +3,8 @@ class Node:
         self.data = data 
         self.next = next
         self.prev = prev
-        
+
+
 class DoublyLinkedList:
     def __init__ (self):
         self.head = None
@@ -64,8 +65,6 @@ class DoublyLinkedList:
                 return    
         print(" Data item is not present in the list. ") 
         return   
-
-
 
 
 words = DoublyLinkedList()

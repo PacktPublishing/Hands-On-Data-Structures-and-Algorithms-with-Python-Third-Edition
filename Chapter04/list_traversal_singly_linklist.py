@@ -29,7 +29,7 @@ class SinglyLinkedList:
             current = current.next 
             yield val
 
-            
+
 words = SinglyLinkedList()
 words.append('egg')
 words.append('ham')
