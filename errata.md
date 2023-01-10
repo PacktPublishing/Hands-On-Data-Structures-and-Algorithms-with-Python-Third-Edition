@@ -22,13 +22,13 @@ else:
 There should be `//` in place of `/`
 
 Incorrect code is:
-```
+```python
 mid = start + (end - start)/2
 if arr[mid] == key:  
    return mid
 ```
 Correct code is:
-```
+```python
 mid = start + (end - start)//2
 if arr[mid] == key:  
    return mid
