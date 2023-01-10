@@ -16,3 +16,20 @@ Correct code is:
 else:
     hash_text[i] = ((hash_text[i-1] - ord_text[i-1]) + ord_text[i+len_pattern-1]) # calculating next hash value using previous value
 ```
+
+## Chapter 3, Page 61 - Fixed the missing '/'
+
+There should be `//` in place of `/`
+
+Incorrect code is:
+```
+mid = start + (end - start)/2
+if arr[mid] == key:  
+   return mid
+```
+Correct code is:
+```
+mid = start + (end - start)//2
+if arr[mid] == key:  
+   return mid
+```
