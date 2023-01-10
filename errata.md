@@ -17,7 +17,7 @@ else:
     hash_text[i] = ((hash_text[i-1] - ord_text[i-1]) + ord_text[i+len_pattern-1]) # calculating next hash value using previous value
 ```
 
-## Chapter 3, Page 61 - Fixed the missing '/' in **binary search** code
+## Chapter 3, Page 61 - Fixed the missing '/' in `binary search` code
 
 There should be `//` in place of `/`
 
