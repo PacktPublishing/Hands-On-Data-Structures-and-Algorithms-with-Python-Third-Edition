@@ -33,3 +33,20 @@ mid = start + (end - start)//2
 if arr[mid] == key:  
    return mid
 ```
+
+
+## Chapter 1, Page 23 - Fixed the missing outputs
+
+This is the actual dictionary
+`mydict = {'a': 1, 'b': 2, 'c': 3}`
+
+|Function |Description |Example|
+| :-------:|  :-------: | :-------: | 
+| `mydict.pop()`| If a given key is present in the dictionary, then this function will remove the key and return the associated value.   | `print(mydict.pop('b'))` should give you output `2` |
+|              `|    | `print(mydict)` should give you output `{'a': 1, 'c': 3}` |
+| `mydict.popitem()`|  This method removes the last key-value pair added in the dictionary and returns it as a tuple.  | `print(mydict.popitem())` should give you output `('c', 3)` |
+|              `|    | `print(mydict)` should give you output `{'a': 1, 'b': 2}` |
+| `mydict.update(<obj>)`| Merges one dictionary with another. Firstly, it checks whether a key of the second dictionary is present in the fi rst dictionary; the corresponding value is then updated. If the key is not present in the fi rst dictionary, then the key-value pair is added.   | It has two dictionaries as `d1 = {'a': 10, 'b': 20, 'c': 30}` and `d2 = {'b': 200, 'd': 400}`|
+|                       |    | `d1.update(d2)` should update values of `d2` on `d1` |
+|                       |    | `print(d1)` should give you `{'a': 10, 'b': 200, 'c': 30, 'd': 400}` |
+
