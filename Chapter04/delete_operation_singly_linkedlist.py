@@ -4,6 +4,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class SinglyLinkedList:
     def __init__ (self):
         self.head = None
@@ -13,12 +14,13 @@ class SinglyLinkedList:
         # Encapsulate the data in a Node 
         node = Node(data)
         if self.head is None:
-            self.head = node    
+            self.head = node
         else: 
             current = self.head 
             while current.next:
-                current = current.next 
+                current = current.next
             current.next = node
+        self.size += 1
             
     def delete_first_node (self): 
         current = self.head  
@@ -26,8 +28,8 @@ class SinglyLinkedList:
             print("No data element to delete")
         elif current == self.head:
             self.head = current.next
-            
-          
+            self.size -= 1
+       
     def delete_last_node (self): 
         current = self.head 
         prev = self.head
@@ -37,8 +39,7 @@ class SinglyLinkedList:
                 self.size -= 1
             prev = current
             current = current.next
-            
-
+     
     def delete(self, data): 
         current = self.head 
         prev = self.head 

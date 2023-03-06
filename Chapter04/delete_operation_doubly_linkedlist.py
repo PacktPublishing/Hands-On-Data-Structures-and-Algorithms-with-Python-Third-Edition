@@ -3,12 +3,13 @@ class Node:
         self.data = data 
         self.next = next
         self.prev = prev
-        
+
+
 class DoublyLinkedList:
     def __init__ (self):
         self.head = None
         self.tail = None
-        self.count = 0
+        self.size = 0
     
     def append(self, data):
         #Append an item to the list.   
@@ -20,9 +21,7 @@ class DoublyLinkedList:
             new_node.prev = self.tail 
             self.tail.next = new_node 
             self.tail = new_node
-            self.count += 1 
-            
-            
+        self.size += 1 
             
     def delete(self, data):
         # Delete a node from the list. 
@@ -31,15 +30,15 @@ class DoublyLinkedList:
         if current is None:       #List is empty
             print("List is empty")
         elif current.data == data:   #Item to be deleted is found at starting of list
-            self.head.prev = None 
-            node_deleted = True 
             self.head = current.next
+            self.head.prev = None
+            node_deleted = True
 
         elif self.tail.data == data:   #Item to be deleted is found at the end of list.
-            self.tail = self.tail.prev  
-            self.tail.next = None 
-            node_deleted = True 
-
+            self.tail = self.tail.prev
+            self.tail.next = None
+            node_deleted = True
+            
         else: 
             while current:          #search item to be deleted, and delete that node
                 if current.data == data: 
@@ -50,11 +49,9 @@ class DoublyLinkedList:
             if node_deleted == False:   #Item to be deleted is not found in the list
                 print("Item not found")
         if node_deleted: 
-            self.count -= 1
+            self.size -= 1
 
-            
-            
-            
+
 #Code to create for a doubly linked list
 words = DoublyLinkedList()
 words.append('egg')

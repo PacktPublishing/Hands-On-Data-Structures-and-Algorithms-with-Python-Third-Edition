@@ -3,12 +3,13 @@ class Node:
         self.data = data 
         self.next = next
         self.prev = prev
-        
+
+
 class DoublyLinkedList:
     def __init__ (self):
         self.head = None
         self.tail = None
-        self.count = 0
+        self.size = 0
     
     def append(self, data):
         #Append an item at the end of the list.   
@@ -20,7 +21,7 @@ class DoublyLinkedList:
             new_node.prev = self.tail 
             self.tail.next = new_node 
             self.tail = new_node
-        self.count += 1
+        self.size += 1
             
             
     def append_at_start(self, data):
@@ -33,7 +34,7 @@ class DoublyLinkedList:
             new_node.next = self.head 
             self.head.prev = new_node 
             self.head = new_node
-        self.count += 1
+        self.size += 1
             
     def append_at_a_location(self, data): 
         current = self.head 
@@ -45,7 +46,7 @@ class DoublyLinkedList:
                 new_node.next = current
                 prev.next = new_node
                 current.prev = new_node
-                self.count += 1
+                self.size += 1
             prev = current
             current = current.next            
 
@@ -64,8 +65,6 @@ class DoublyLinkedList:
                 return    
         print(" Data item is not present in the list. ") 
         return   
-
-
 
 
 words = DoublyLinkedList()
