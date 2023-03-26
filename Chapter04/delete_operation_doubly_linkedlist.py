@@ -31,9 +31,9 @@ class DoublyLinkedList:
         if current is None:       #List is empty
             print("List is empty")
         elif current.data == data:   #Item to be deleted is found at starting of list
+            self.head = current.next
             self.head.prev = None 
             node_deleted = True 
-            self.head = current.next
 
         elif self.tail.data == data:   #Item to be deleted is found at the end of list.
             self.tail = self.tail.prev  
