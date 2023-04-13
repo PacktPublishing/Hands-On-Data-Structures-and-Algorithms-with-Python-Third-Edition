@@ -26,8 +26,8 @@ def level_order_traversal(root_node):
         list_of_nodes.append(node.data) 
         if node.left_child: 
             traversal_queue.append(node.left_child) 
-            if node.right_child: 
-                traversal_queue.append(node.right_child) 
+        if node.right_child: 
+            traversal_queue.append(node.right_child) 
     return list_of_nodes 
 
 
