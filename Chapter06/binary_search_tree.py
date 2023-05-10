@@ -42,8 +42,8 @@ class Tree:
         parent = None 
         current = self.root_node 
         if current is None: 
-            return (parent, None) 
-        while True: 
+            return (None, None) 
+        while current is not None: 
             if current.data == data: 
                 return (parent, current) 
             elif current.data > data: 
@@ -51,8 +51,8 @@ class Tree:
                 current = current.left_child 
             else: 
                 parent = current 
-                current = current.right_child 
-        return (parent, current) 
+                current = current.right_child
+        return (None, None)
    
 
     def remove(self, data):  
