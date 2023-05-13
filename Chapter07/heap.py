@@ -45,6 +45,7 @@ class MinHeap:
         self.heap[location] = self.heap[self.size]
         self.size -= 1
         self.heap.pop()
+        self.arrange(location)
         self.sink(location)
         return item
       
