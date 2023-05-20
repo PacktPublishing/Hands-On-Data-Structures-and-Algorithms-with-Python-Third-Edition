@@ -17,13 +17,13 @@ def pop():
     if top == -1:
         print("Stack Underflow")
     else:
-        top = top - 1
+        item = data[top]
         data[top] = 0
-        return data[top + 1]
+        top = top - 1
+        return item
 
 
 def peek():
-    global top
     if top == -1:
         print("Stack is empty")
     else:
@@ -39,9 +39,9 @@ push("new2")
 print(data[0 : top + 1])
 
 print(data[0 : top + 1])
-pop()
-pop()
-pop()
+print(pop())
+print(pop())
+print(pop())
 pop()
 print(data[0 : top + 1])
 
