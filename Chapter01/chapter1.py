@@ -242,9 +242,9 @@ Both are pointing to the same object
 Firstlist = []
 Secondlist = []
 if Firstlist is not Secondlist:
-  print("Both Firstlist and Secondlist variables are the same object")
-else:
   print("Both Firstlist and Secondlist variables are not the same object") 
+else:
+  print("Both Firstlist and Secondlist variables are the same object")
 
 #Output:
 # Both Firstlist and Secondlist variables are the same object
